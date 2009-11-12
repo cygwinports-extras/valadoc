@@ -1,0 +1,19 @@
+--- origsrc/valadoc/src/libvaladoc/moduleloader.vala	2009-11-10 01:05:36.000000000 -0600
++++ src/valadoc/src/libvaladoc/moduleloader.vala	2009-11-10 01:47:11.822762200 -0600
+@@ -20,7 +20,6 @@
+  * 	Brosch Florian <flo.brosch@gmail.com>
+  */
+ 
+-using GLib.Path;
+ using Gee;
+ 
+ 
+@@ -50,7 +49,7 @@ public class Valadoc.ModuleLoader : Obje
+ 	private bool load_doclet (string path) {
+ 		void* function;
+ 
+-		docletmodule = Module.open ( build_filename(path, "libdoclet.so"), ModuleFlags.BIND_LAZY);
++		docletmodule = Module.open ( Module.build_path(path, "doclet"), ModuleFlags.BIND_LAZY);
+ 		if (docletmodule == null) {
+ 			return false;
+ 		}
