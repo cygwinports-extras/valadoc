@@ -4,27 +4,28 @@ Valadoc is a documentation generator for generating API documentation
 from Vala source code based on libvala.
 
 Runtime requirements:
-  cygwin-1.7.0-62
-  libgcc1-4.3.4-1
+  cygwin-1.7.5-1
+  libgcc1-4.3.4-3
   libgee2-0.5.0-1
-  libglib2.0_0-2.22.2-1
+  libglib2.0_0-2.22.4-2
   libgraph4-2.24.0-1
   libgvc5-2.24.0-1
-  libvala0-0.7.8-1
+  libvala0-0.8.1-1
 
 Build requirements:
 (besides corresponding -devel packages)
-  autoconf2.5-2.63-10
-  automake1.11-1.11-10
-  binutils-2.19.51-1
-  cygport-0.9.10-1
+  autoconf2.5-2.65-1
+  automake1.11-1.11.1-1
+  binutils-2.20.51-1
+  cygport-0.9.83-1
   gawk-3.1.7-1
-  gcc4-core-4.3.4-1
-  libtool-2.2.7a-14
+  gcc4-core-4.3.4-3
+  libtool-2.2.7a-15
   make-3.81-2
   pkg-config-0.23b-10
-  sed-4.1.5-2
-  vala-0.7.8-1
+  sed-4.2.1-1
+  vala-0.8.1-1
+  vala-libgvc-0.8.1-1
 
 Canonical website:
   http://live.gnome.org/Valadoc
@@ -49,6 +50,9 @@ This will create:
 -------------------------------------------
 
 Port Notes:
+
+----- version 0.2-2 -----
+Updated snapshot for compatibility with Vala 0.8.
 
 ----- version 0.2-1 -----
 Initial release for Cygwin 1.7.

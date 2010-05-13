@@ -1,0 +1,14 @@
+.libs/doclet.o: In function `register_plugin':
+doclet.c:1377: undefined reference to `_gtkdoc_generator_file_data_register_type'
+
+--- origsrc/valadoc/src/doclets/gtkdoc/generator.vala	2010-05-12 21:49:43.000000000 -0500
++++ src/valadoc/src/doclets/gtkdoc/generator.vala	2010-05-12 22:29:24.821579200 -0500
+@@ -25,7 +25,7 @@ using Valadoc.Api;
+ using Valadoc.Content;
+ 
+ public class Gtkdoc.Generator : Api.Visitor {
+-	class FileData {
++	public class FileData {
+ 		public string filename;
+ 		public Gee.List<string> comments;
+ 		public Gee.List<string> section_lines;
