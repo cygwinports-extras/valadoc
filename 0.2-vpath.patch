@@ -4,8 +4,8 @@
  
  
  libdoclet.vala.stamp: $(libdoclet_la_VALASOURCES)
--	$(VALAC) -C --vapidir $(top_srcdir)/src/vapi --vapidir $(top_srcdir)/src/libvaladoc --pkg vala-1.0 --pkg gee-1.0 --pkg valadoc-1.0 --basedir . $^
-+	$(VALAC) -C --vapidir $(top_srcdir)/src/vapi --vapidir $(top_builddir)/src/libvaladoc --pkg vala-1.0 --pkg gee-1.0 --pkg valadoc-1.0 --basedir . $^
+-	$(VALAC) -C --vapidir $(top_srcdir)/src/vapi --vapidir $(top_srcdir)/src/libvaladoc --pkg $(VALA_PACKAGE) --pkg gee-1.0 --pkg valadoc-1.0 --basedir . $^
++	$(VALAC) -C --vapidir $(top_srcdir)/src/vapi --vapidir $(top_builddir)/src/libvaladoc --pkg $(VALA_PACKAGE) --pkg gee-1.0 --pkg valadoc-1.0 --basedir . $^
  	touch $@
  
  
@@ -15,8 +15,8 @@
  
  
  libdoclet.vala.stamp: $(libdoclet_la_VALASOURCES)
--	$(VALAC) -C --vapidir $(top_srcdir)/src/vapi --vapidir $(top_srcdir)/src/libvaladoc  --pkg vala-1.0 --pkg gee-1.0 --pkg valadoc-1.0 --basedir . $^
-+	$(VALAC) -C --vapidir $(top_srcdir)/src/vapi --vapidir $(top_builddir)/src/libvaladoc  --pkg vala-1.0 --pkg gee-1.0 --pkg valadoc-1.0 --basedir . $^
+-	$(VALAC) -C --vapidir $(top_srcdir)/src/vapi --vapidir $(top_srcdir)/src/libvaladoc  --pkg $(VALA_PACKAGE) --pkg gee-1.0 --pkg valadoc-1.0 --basedir . $^
++	$(VALAC) -C --vapidir $(top_srcdir)/src/vapi --vapidir $(top_builddir)/src/libvaladoc  --pkg $(VALA_PACKAGE) --pkg gee-1.0 --pkg valadoc-1.0 --basedir . $^
  	touch $@
  
  
@@ -26,8 +26,8 @@
  
  
  libdoclet.vala.stamp: $(libdoclet_la_VALASOURCES)
--	$(VALAC) -C --vapidir $(top_srcdir)/src/vapi --vapidir $(top_srcdir)/src/libvaladoc  --pkg vala-1.0 --pkg gee-1.0 --pkg valadoc-1.0 --basedir . $^
-+	$(VALAC) -C --vapidir $(top_srcdir)/src/vapi --vapidir $(top_builddir)/src/libvaladoc  --pkg vala-1.0 --pkg gee-1.0 --pkg valadoc-1.0 --basedir . $^
+-	$(VALAC) -C --vapidir $(top_srcdir)/src/vapi --vapidir $(top_srcdir)/src/libvaladoc  --pkg $(VALA_PACKAGE) --pkg gee-1.0 --pkg valadoc-1.0 --basedir . $^
++	$(VALAC) -C --vapidir $(top_srcdir)/src/vapi --vapidir $(top_builddir)/src/libvaladoc  --pkg $(VALA_PACKAGE) --pkg gee-1.0 --pkg valadoc-1.0 --basedir . $^
  	touch $@
  
  
@@ -37,19 +37,8 @@
  
  
  libdoclet.vala.stamp: $(libdoclet_VALASOURCES)
--	$(VALAC) -C --vapidir $(top_srcdir)/src/libvaladoc/ --vapidir $(top_srcdir)/src/vapi/ --pkg vala-1.0 --pkg gee-1.0 --pkg valadoc-1.0 --basedir . --save-temps $^
-+	$(VALAC) -C --vapidir $(top_builddir)/src/libvaladoc/ --vapidir $(top_srcdir)/src/vapi/ --pkg vala-1.0 --pkg gee-1.0 --pkg valadoc-1.0 --basedir . --save-temps $^
- 	touch $@
- 
- 
---- origsrc/valadoc/src/doclets/xml/Makefile.am	2010-05-12 21:49:43.000000000 -0500
-+++ src/valadoc/src/doclets/xml/Makefile.am	2010-05-12 22:03:13.607710900 -0500
-@@ -12,7 +12,7 @@ BUILT_SOURCES = libdoclet.vala.stamp
- 
- 
- libdoclet.vala.stamp: $(libdoclet_VALASOURCES)
--	$(VALAC) -C --vapidir $(top_srcdir)/src/vapi/ --vapidir $(top_srcdir)/src/libvaladoc --pkg valadoc-1.0 --pkg vala-1.0 --pkg gee-1.0 --basedir . --save-temps $^
-+	$(VALAC) -C --vapidir $(top_srcdir)/src/vapi/ --vapidir $(top_builddir)/src/libvaladoc --pkg valadoc-1.0 --pkg vala-1.0 --pkg gee-1.0 --basedir . --save-temps $^
+-	$(VALAC) -C --vapidir $(top_srcdir)/src/libvaladoc/ --vapidir $(top_srcdir)/src/vapi/ --pkg $(VALA_PACKAGE) --pkg gee-1.0 --pkg valadoc-1.0 --basedir . --save-temps $^
++	$(VALAC) -C --vapidir $(top_builddir)/src/libvaladoc/ --vapidir $(top_srcdir)/src/vapi/ --pkg $(VALA_PACKAGE) --pkg gee-1.0 --pkg valadoc-1.0 --basedir . --save-temps $^
  	touch $@
  
  
@@ -64,9 +53,3 @@
  
  
  lib_LTLIBRARIES = \
-@@ -181,3 +181,5 @@ vapi_DATA =     \
- 	$(NULL)
- 
- 
-+$(abs_builddir)/valadoc-1.0.deps: $(abs_srcdir)/valadoc-1.0.deps
-+	cp -f $< $@
