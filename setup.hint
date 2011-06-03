@@ -1,5 +1,5 @@
 category: Devel Doc Gnome
-requires: libgee2 libglib2.0_0 libglib2.0_0 libgraph4 libgvc5 libvala0.10_0
+requires: libgee2 libglib2.0_0 libglib2.0_0 libgraph4 libgvc5 libvala0.12_0
 sdesc: "Vala documentation generator"
 ldesc: "Valadoc is a documentation generator for generating API 
 documentation from Vala source code based on libvala."

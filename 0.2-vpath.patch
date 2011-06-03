@@ -31,17 +31,6 @@
  	touch $@
  
  
---- origsrc/valadoc/src/doclets/valadoc.org/Makefile.am	2010-05-12 21:49:43.000000000 -0500
-+++ src/valadoc/src/doclets/valadoc.org/Makefile.am	2010-05-12 22:12:08.298293400 -0500
-@@ -11,7 +11,7 @@ BUILT_SOURCES = libdoclet.vala.stamp
- 
- 
- libdoclet.vala.stamp: $(libdoclet_VALASOURCES)
--	$(VALAC) -C --vapidir $(top_srcdir)/src/libvaladoc/ --vapidir $(top_srcdir)/src/vapi/ --pkg $(VALA_PACKAGE) --pkg gee-1.0 --pkg valadoc-1.0 --basedir . --save-temps $^
-+	$(VALAC) -C --vapidir $(top_builddir)/src/libvaladoc/ --vapidir $(top_srcdir)/src/vapi/ --pkg $(VALA_PACKAGE) --pkg gee-1.0 --pkg valadoc-1.0 --basedir . --save-temps $^
- 	touch $@
- 
- 
 --- origsrc/valadoc/src/libvaladoc/Makefile.am	2010-05-12 21:49:43.000000000 -0500
 +++ src/valadoc/src/libvaladoc/Makefile.am	2010-05-12 22:09:09.764081900 -0500
 @@ -14,7 +14,7 @@ AM_CFLAGS = \

@@ -6,7 +6,7 @@ HOMEPAGE="http://live.gnome.org/Valadoc"
 PATCH_URI="
 	0.2-doclet-module-load.patch
 	0.2-gtkdoc-no-undefined.patch
-	0.2-stderr.patch
+	0.2.1-stderr.patch
 	0.2-vpath.patch
 "
 
