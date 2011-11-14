@@ -1,3 +1,4 @@
+GIT_BRANCH="valac-0.12"  # master requires vala-0.14
 inherit gnome2 git
 
 DESCRIPTION="Vala documentation generator"
