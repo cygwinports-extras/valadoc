@@ -1,0 +1,20 @@
+--- origsrc/valadoc/src/libvaladoc/moduleloader.vala	2011-11-16 02:59:59.407951500 -0600
++++ src/valadoc/src/libvaladoc/moduleloader.vala	2011-11-16 02:59:47.660279500 -0600
+@@ -48,7 +48,7 @@ public class Valadoc.ModuleLoader : Obje
+ 	public bool load_doclet (string path) {
+ 		void* function;
+ 
+-		docletmodule = Module.open (Module.build_path (path, "libdoclet"), ModuleFlags.BIND_LAZY | ModuleFlags.BIND_LOCAL);
++		docletmodule = Module.open (Module.build_path (path, "doclet"), ModuleFlags.BIND_LAZY | ModuleFlags.BIND_LOCAL);
+ 		if (docletmodule == null) {
+ 			return false;
+ 		}
+@@ -68,7 +68,7 @@ public class Valadoc.ModuleLoader : Obje
+ 	public bool load_driver (string path) {
+ 		void* function;
+ 
+-		drivermodule = Module.open (Module.build_path (path, "libdriver"), ModuleFlags.BIND_LAZY | ModuleFlags.BIND_LOCAL);
++		drivermodule = Module.open (Module.build_path (path, "driver"), ModuleFlags.BIND_LAZY | ModuleFlags.BIND_LOCAL);
+ 		if (drivermodule == null) {
+ 			return false;
+ 		}
