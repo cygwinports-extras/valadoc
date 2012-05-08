@@ -1,20 +1,29 @@
---- origsrc/valadoc/src/libvaladoc/moduleloader.vala	2011-11-16 02:59:59.407951500 -0600
-+++ src/valadoc/src/libvaladoc/moduleloader.vala	2011-11-16 02:59:47.660279500 -0600
-@@ -48,7 +48,7 @@ public class Valadoc.ModuleLoader : Obje
- 	public bool load_doclet (string path) {
- 		void* function;
+--- origsrc/valadoc/src/libvaladoc/moduleloader.vala	2012-05-08 01:56:11.000000000 -0500
++++ src/valadoc/src/libvaladoc/moduleloader.vala	2012-05-08 02:38:21.316823400 -0500
+@@ -71,7 +71,7 @@ public class Valadoc.ModuleLoader : Obje
+ 	}
  
--		docletmodule = Module.open (Module.build_path (path, "libdoclet"), ModuleFlags.BIND_LAZY | ModuleFlags.BIND_LOCAL);
-+		docletmodule = Module.open (Module.build_path (path, "doclet"), ModuleFlags.BIND_LAZY | ModuleFlags.BIND_LOCAL);
- 		if (docletmodule == null) {
- 			return false;
- 		}
-@@ -68,7 +68,7 @@ public class Valadoc.ModuleLoader : Obje
- 	public bool load_driver (string path) {
- 		void* function;
+ 	public static bool is_driver (string path) {
+-		string library_path = Path.build_filename (path, "libdriver." + Module.SUFFIX);
++		string library_path = Module.build_path (path, "driver");
+ 		return FileUtils.test (path, FileTest.EXISTS) && FileUtils.test (library_path, FileTest.EXISTS);
+ 	}
  
--		drivermodule = Module.open (Module.build_path (path, "libdriver"), ModuleFlags.BIND_LAZY | ModuleFlags.BIND_LOCAL);
-+		drivermodule = Module.open (Module.build_path (path, "driver"), ModuleFlags.BIND_LAZY | ModuleFlags.BIND_LOCAL);
- 		if (drivermodule == null) {
- 			return false;
- 		}
+@@ -180,7 +180,7 @@ public class Valadoc.ModuleLoader : Obje
+ 		if (data == null) {
+ 			void* function;
+ 
+-			Module? module = Module.open (Module.build_path (path, "libdoclet"), ModuleFlags.BIND_LAZY | ModuleFlags.BIND_LOCAL);
++			Module? module = Module.open (Module.build_path (path, "doclet"), ModuleFlags.BIND_LAZY | ModuleFlags.BIND_LOCAL);
+ 			if (module == null) {
+ 				return null;
+ 			}
+@@ -208,7 +208,7 @@ public class Valadoc.ModuleLoader : Obje
+ 		if (data == null) {
+ 			void* function;
+ 
+-			Module? module = Module.open (Module.build_path (path, "libdriver"), ModuleFlags.BIND_LAZY | ModuleFlags.BIND_LOCAL);
++			Module? module = Module.open (Module.build_path (path, "driver"), ModuleFlags.BIND_LAZY | ModuleFlags.BIND_LOCAL);
+ 			if (module == null) {
+ 				return null;
+ 			}
