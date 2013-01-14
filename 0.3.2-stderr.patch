@@ -1,6 +1,6 @@
---- origsrc/valadoc/src/doclets/gtkdoc/doclet.vala	2011-11-16 02:36:16.000000000 -0600
-+++ src/valadoc/src/doclets/gtkdoc/doclet.vala	2011-11-16 02:41:32.888662200 -0600
-@@ -271,21 +271,21 @@ public class Gtkdoc.Director : Valadoc.D
+--- origsrc/valadoc/src/doclets/gtkdoc/doclet.vala	2013-01-13 20:43:57.000000000 -0600
++++ src/valadoc/src/doclets/gtkdoc/doclet.vala	2013-01-13 20:53:55.949353100 -0600
+@@ -281,21 +281,21 @@ public class Gtkdoc.Director : Valadoc.D
  		pc_libs += "--libs";
  
  		try {
@@ -12,8 +12,8 @@
 -			Process.spawn_sync (null, pc_cflags, null, SpawnFlags.SEARCH_PATH, null, out cflags, out stderr, out status);
 +			Process.spawn_sync (null, pc_cflags, null, SpawnFlags.SEARCH_PATH, null, out cflags, out cerr, out status);
  			if (status != 0) {
--				reporter.simple_error ("GtkDoc: pkg-config cflags error: %s", stderr);
-+				reporter.simple_error ("GtkDoc: pkg-config cflags error: %s", cerr);
+-				reporter.simple_error ("GtkDoc: error: pkg-config cflags error: %s", stderr);
++				reporter.simple_error ("GtkDoc: error: pkg-config cflags error: %s", cerr);
  				return false;
  			}
  			cflags = cflags.strip ();
@@ -22,8 +22,8 @@
 -			Process.spawn_sync (null, pc_libs, null, SpawnFlags.SEARCH_PATH, null, out libs, out stderr, out status);
 +			Process.spawn_sync (null, pc_libs, null, SpawnFlags.SEARCH_PATH, null, out libs, out cerr, out status);
  			if (status != 0) {
--				reporter.simple_error ("GtkDoc: pkg-config libs error: %s", stderr);
-+				reporter.simple_error ("GtkDoc: pkg-config libs error: %s", cerr);
+-				reporter.simple_error ("GtkDoc: error: pkg-config libs error: %s", stderr);
++				reporter.simple_error ("GtkDoc: error: pkg-config libs error: %s", cerr);
  				return false;
  			}
  

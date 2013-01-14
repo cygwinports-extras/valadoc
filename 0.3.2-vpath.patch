@@ -4,8 +4,8 @@
  
  
  libdoclet.vala.stamp: $(libdoclet_la_VALASOURCES)
--	$(VALAC) -C --vapidir $(top_srcdir)/src/vapi --vapidir $(top_srcdir)/src/libvaladoc --pkg gee-1.0 --pkg valadoc-1.0 --basedir . $^
-+	$(VALAC) -C --vapidir $(top_srcdir)/src/vapi --vapidir $(top_builddir)/src/libvaladoc --pkg gee-1.0 --pkg valadoc-1.0 --basedir . $^
+-	$(VALAC) -C --vapidir $(top_srcdir)/src/vapi --vapidir $(top_srcdir)/src/libvaladoc --pkg gee-0.8 --pkg valadoc-1.0 --basedir . $^
++	$(VALAC) -C --vapidir $(top_srcdir)/src/vapi --vapidir $(top_builddir)/src/libvaladoc --pkg gee-0.8 --pkg valadoc-1.0 --basedir . $^
  	touch $@
  
  
@@ -15,8 +15,8 @@
  
  
  libdoclet.vala.stamp: $(libdoclet_la_VALASOURCES)
--	$(VALAC) -C --vapidir $(top_srcdir)/src/vapi --vapidir $(top_srcdir)/src/libvaladoc --pkg gee-1.0 --pkg valadoc-1.0 --basedir . $^
-+	$(VALAC) -C --vapidir $(top_srcdir)/src/vapi --vapidir $(top_builddir)/src/libvaladoc --pkg gee-1.0 --pkg valadoc-1.0 --basedir . $^
+-	$(VALAC) -C --vapidir $(top_srcdir)/src/vapi --vapidir $(top_srcdir)/src/libvaladoc --pkg gee-0.8 --pkg valadoc-1.0 --basedir . $^
++	$(VALAC) -C --vapidir $(top_srcdir)/src/vapi --vapidir $(top_builddir)/src/libvaladoc --pkg gee-0.8 --pkg valadoc-1.0 --basedir . $^
  	touch $@
  
  
@@ -26,19 +26,8 @@
  
  
  libdoclet.vala.stamp: $(libdoclet_la_VALASOURCES)
--	$(VALAC) -C --vapidir $(top_srcdir)/src/vapi --vapidir $(top_srcdir)/src/libvaladoc --pkg gee-1.0 --pkg valadoc-1.0 --basedir . $^
-+	$(VALAC) -C --vapidir $(top_srcdir)/src/vapi --vapidir $(top_builddir)/src/libvaladoc --pkg gee-1.0 --pkg valadoc-1.0 --basedir . $^
- 	touch $@
- 
- 
---- origsrc/valadoc/src/driver/0.12.x/Makefile.am	2012-05-08 01:56:11.000000000 -0500
-+++ src/valadoc/src/driver/0.12.x/Makefile.am	2012-05-08 02:36:08.275213900 -0500
-@@ -52,7 +52,7 @@ libdriver_la_SOURCES =      \
- 
- 
- libdriver.vala.stamp: $(libdriver_la_VALASOURCES)
--	$(VALAC) -C --vapidir $(top_srcdir)/src/vapi --vapidir $(top_srcdir)/src/libvaladoc --pkg $(VALA_PACKAGE_NAME) --pkg gee-1.0 --pkg valadoc-1.0 --vapidir $(VERSIONED_VAPI_DIR) --basedir . -D $(VALARUNTIMEFLAGS) $^
-+	$(VALAC) -C --vapidir $(top_srcdir)/src/vapi --vapidir $(top_builddir)/src/libvaladoc --pkg $(VALA_PACKAGE_NAME) --pkg gee-1.0 --pkg valadoc-1.0 --vapidir $(VERSIONED_VAPI_DIR) --basedir . -D $(VALARUNTIMEFLAGS) $^
+-	$(VALAC) -C --vapidir $(top_srcdir)/src/vapi --vapidir $(top_srcdir)/src/libvaladoc --pkg gee-0.8 --pkg valadoc-1.0 --basedir . $^
++	$(VALAC) -C --vapidir $(top_srcdir)/src/vapi --vapidir $(top_builddir)/src/libvaladoc --pkg gee-0.8 --pkg valadoc-1.0 --basedir . $^
  	touch $@
  
  
@@ -48,8 +37,8 @@
  
  
  libdriver.vala.stamp: $(libdriver_la_VALASOURCES)
--	$(VALAC) $(VALA_FLAGS) -C --vapidir $(top_srcdir)/src/vapi --vapidir $(VERSIONED_VAPI_DIR) --vapidir $(top_srcdir)/src/libvaladoc --pkg libvala-0.14 --pkg gee-1.0 --pkg valadoc-1.0 --basedir . $(VALA_FLAGS) $^
-+	$(VALAC) $(VALA_FLAGS) -C --vapidir $(top_srcdir)/src/vapi --vapidir $(VERSIONED_VAPI_DIR) --vapidir $(top_builddir)/src/libvaladoc --pkg libvala-0.14 --pkg gee-1.0 --pkg valadoc-1.0 --basedir . $(VALA_FLAGS) $^
+-	$(VALAC) $(VALA_FLAGS) -C --vapidir $(top_srcdir)/src/vapi --vapidir $(VERSIONED_VAPI_DIR) --vapidir $(top_srcdir)/src/libvaladoc --pkg libvala-0.14 --pkg gee-0.8 --pkg valadoc-1.0 --basedir . $(VALA_FLAGS) $^
++	$(VALAC) $(VALA_FLAGS) -C --vapidir $(top_srcdir)/src/vapi --vapidir $(VERSIONED_VAPI_DIR) --vapidir $(top_builddir)/src/libvaladoc --pkg libvala-0.14 --pkg gee-0.8 --pkg valadoc-1.0 --basedir . $(VALA_FLAGS) $^
  	touch $@
  
  
@@ -59,8 +48,8 @@
  
  
  libdriver.vala.stamp: $(libdriver_la_VALASOURCES)
--	$(VALAC) $(VALA_FLAGS) -C --vapidir $(VERSIONED_VAPI_DIR) --vapidir $(top_srcdir)/src/vapi --vapidir $(top_srcdir)/src/libvaladoc --pkg libvala-0.16 --pkg gee-1.0 --pkg valadoc-1.0 --basedir . $^
-+	$(VALAC) $(VALA_FLAGS) -C --vapidir $(VERSIONED_VAPI_DIR) --vapidir $(top_srcdir)/src/vapi --vapidir $(top_builddir)/src/libvaladoc --pkg libvala-0.16 --pkg gee-1.0 --pkg valadoc-1.0 --basedir . $^
+-	$(VALAC) $(VALA_FLAGS) -C --vapidir $(VERSIONED_VAPI_DIR) --vapidir $(top_srcdir)/src/vapi --vapidir $(top_srcdir)/src/libvaladoc --pkg libvala-0.16 --pkg gee-0.8 --pkg valadoc-1.0 --basedir . $^
++	$(VALAC) $(VALA_FLAGS) -C --vapidir $(VERSIONED_VAPI_DIR) --vapidir $(top_srcdir)/src/vapi --vapidir $(top_builddir)/src/libvaladoc --pkg libvala-0.16 --pkg gee-0.8 --pkg valadoc-1.0 --basedir . $^
  	touch $@
  
  
@@ -70,8 +59,19 @@
  
  
  libdriver.vala.stamp: $(libdriver_la_VALASOURCES)
--	$(VALAC) $(VALA_FLAGS) -C --vapidir $(VERSIONED_VAPI_DIR) --vapidir $(top_srcdir)/src/vapi --vapidir $(top_srcdir)/src/libvaladoc --pkg libvala-0.18 --pkg gee-1.0 --pkg valadoc-1.0 --basedir . $^
-+	$(VALAC) $(VALA_FLAGS) -C --vapidir $(VERSIONED_VAPI_DIR) --vapidir $(top_srcdir)/src/vapi --vapidir $(top_builddir)/src/libvaladoc --pkg libvala-0.18 --pkg gee-1.0 --pkg valadoc-1.0 --basedir . $^
+-	$(VALAC) $(VALA_FLAGS) -C --vapidir $(VERSIONED_VAPI_DIR) --vapidir $(top_srcdir)/src/vapi --vapidir $(top_srcdir)/src/libvaladoc --pkg libvala-0.18 --pkg gee-0.8 --pkg valadoc-1.0 --basedir . $^
++	$(VALAC) $(VALA_FLAGS) -C --vapidir $(VERSIONED_VAPI_DIR) --vapidir $(top_srcdir)/src/vapi --vapidir $(top_builddir)/src/libvaladoc --pkg libvala-0.18 --pkg gee-0.8 --pkg valadoc-1.0 --basedir . $^
+ 	touch $@
+ 
+ 
+--- origsrc/valadoc/src/driver/0.20.x/Makefile.am
++++ src/valadoc/src/driver/0.20.x/Makefile.am
+@@ -43,7 +43,7 @@ libdriver_la_SOURCES =      \
+ 
+ 
+ libdriver.vala.stamp: $(libdriver_la_VALASOURCES)
+-	$(VALAC) $(VALA_FLAGS) -C --vapidir $(VERSIONED_VAPI_DIR) --vapidir $(top_srcdir)/src/vapi --vapidir $(top_srcdir)/src/libvaladoc --pkg libvala-0.20 --pkg gee-0.8 --pkg valadoc-1.0 --basedir . $^
++	$(VALAC) $(VALA_FLAGS) -C --vapidir $(VERSIONED_VAPI_DIR) --vapidir $(top_srcdir)/src/vapi --vapidir $(top_builddir)/src/libvaladoc --pkg libvala-0.20 --pkg gee-0.8 --pkg valadoc-1.0 --basedir . $^
  	touch $@
  
  
