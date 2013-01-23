@@ -2,7 +2,7 @@ inherit gnome2 git
 
 NAME="valadoc"
 VERSION=0.3.2
-RELEASE=3
+RELEASE=4
 CATEGORY="Devel Doc GNOME"
 SUMMARY="Vala documentation generator"
 DESCRIPTION="Valadoc is a documentation generator for generating API
