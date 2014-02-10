@@ -1,9 +1,9 @@
 inherit gnome2 git
 
 NAME="valadoc"
-VERSION=0.3.2
-RELEASE=5
-CATEGORY="Devel Doc GNOME"
+VERSION=0.23.2
+RELEASE=1
+CATEGORY="Devel"
 SUMMARY="Vala documentation generator"
 DESCRIPTION="Valadoc is a documentation generator for generating API
 documentation from Vala source code based on libvala."
@@ -13,7 +13,7 @@ PATCH_URI="
 	0.2-gtkdoc-no-undefined.patch
 	0.3.2-module-load.patch
 	0.3.2-stderr.patch
-	0.3.2-vpath.patch
+	0.23.2-vpath.patch
 "
 
 PKG_NAMES="${NAME} ${NAME}-devel vala-valadoc1.0"
