@@ -1,38 +1,5 @@
---- origsrc/valadoc/src/driver/0.20.x/Makefile.am	2014-02-10 03:17:35.000000000 -0600
-+++ src/valadoc/src/driver/0.20.x/Makefile.am	2014-02-10 03:30:43.452781400 -0600
-@@ -17,7 +17,7 @@ AM_VALAFLAGS = \
- 	$(VALAFLAGS) \
- 	--vapidir $(VERSIONED_VAPI_DIR) \
- 	--vapidir $(top_srcdir)/src/vapi \
--	--vapidir $(top_srcdir)/src/libvaladoc \
-+	--vapidir $(top_builddir)/src/libvaladoc \
- 	--basedir $(srcdir) \
- 	--directory $(builddir) \
- 	-C \
---- origsrc/valadoc/src/driver/0.22.x/Makefile.am	2014-02-10 03:17:35.000000000 -0600
-+++ src/valadoc/src/driver/0.22.x/Makefile.am	2014-02-10 03:30:43.452781400 -0600
-@@ -17,7 +17,7 @@ AM_VALAFLAGS = \
- 	$(VALAFLAGS) \
- 	--vapidir $(VERSIONED_VAPI_DIR) \
- 	--vapidir $(top_srcdir)/src/vapi \
--	--vapidir $(top_srcdir)/src/libvaladoc \
-+	--vapidir $(top_builddir)/src/libvaladoc \
- 	--basedir $(srcdir) \
- 	--directory $(builddir) \
- 	-C \
---- origsrc/valadoc/src/driver/0.24.x/Makefile.am	2014-02-10 03:17:35.000000000 -0600
-+++ src/valadoc/src/driver/0.24.x/Makefile.am	2014-02-10 03:30:43.452781400 -0600
-@@ -17,7 +17,7 @@ AM_VALAFLAGS = \
- 	$(VALAFLAGS) \
- 	--vapidir $(VERSIONED_VAPI_DIR) \
- 	--vapidir $(top_srcdir)/src/vapi \
--	--vapidir $(top_srcdir)/src/libvaladoc \
-+	--vapidir $(top_builddir)/src/libvaladoc \
- 	--basedir $(srcdir) \
- 	--directory $(builddir) \
- 	-C \
---- origsrc/valadoc/src/driver/0.26.x/Makefile.am	2014-02-10 03:17:35.000000000 -0600
-+++ src/valadoc/src/driver/0.26.x/Makefile.am	2014-02-10 03:30:43.452781400 -0600
+--- origsrc/valadoc/src/driver/0.30.x/Makefile.am	2014-02-10 03:17:35.000000000 -0600
++++ src/valadoc/src/driver/0.30.x/Makefile.am	2014-02-10 03:30:43.452781400 -0600
 @@ -17,7 +17,7 @@ AM_VALAFLAGS = \
  	$(VALAFLAGS) \
  	--vapidir $(VERSIONED_VAPI_DIR) \
